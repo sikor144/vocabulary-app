@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  polish_term: MyString
+  english_term: MyString
+  vocabulary_set: one
+
+two:
+  polish_term: MyString
+  english_term: MyString
+  vocabulary_set: two

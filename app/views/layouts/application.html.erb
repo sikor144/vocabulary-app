@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VocabularyApp</title>
+    <title>Vocabulary App</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,23 @@
   </head>
 
   <body>
-<%= render 'layouts/react_hot_assets' %>
-    <%= yield %>
+    <header class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-brand">Vocabulary App</div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to 'Home', '/' %>
+          </li>
+          <li>
+            <%= link_to 'My sets', 'sets' %>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <%= render partial: 'shared/flash_messages', flash: flash %>
+      <%= render 'layouts/react_hot_assets' %>
+      <%= yield %>
+    </div>
   </body>
 </html>
