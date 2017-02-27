@@ -4,7 +4,7 @@ require('./index');
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
-const dispatcher = new (require('httpdispatcher'))();
+const dispatcher = require('httpdispatcher');
 const { integrationsManager } = require('react-webpack-rails');
 
 const PORT = 8081;

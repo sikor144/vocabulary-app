@@ -1,5 +1,5 @@
 class ReactExamplesController < ApplicationController
   def component
-    @name = 'Michał'
+    @name = 'test'
   end
 end
