@@ -63,12 +63,20 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_girl (4.8.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.8.0)
+      factory_girl (~> 4.8.0)
+      railties (>= 3.0.0)
+    ffaker (2.4.0)
     ffi (1.9.17)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.8.1)
+    interception (0.5)
     jbuilder (2.6.2)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -98,6 +106,11 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
+    pry-rescue (1.4.4)
+      interception (>= 0.5)
+      pry
     puma (3.7.1)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -114,6 +127,10 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.1)
       sprockets-rails (>= 2.0.0)
+    rails-controller-testing (1.0.1)
+      actionpack (~> 5.x)
+      actionview (~> 5.x)
+      activesupport (~> 5.x)
     rails-dom-testing (2.0.2)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6)
@@ -133,6 +150,23 @@ GEM
       rails (>= 3.2)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-rails (3.5.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
     rwr-react_router (0.3.0)
       react_webpack_rails (>= 0.1.0)
     rwr-redux (0.5.0)
@@ -148,6 +182,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
     slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -191,17 +227,23 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  factory_girl_rails
+  ffaker
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  pry
+  pry-rails
+  pry-rescue
   puma (~> 3.0)
   rails (~> 5.0.1)
+  rails-controller-testing
   react_webpack_rails
+  rspec-rails
   rwr-react_router
   rwr-redux
   rwr-view_helpers (~> 0.1.1)
   sass-rails (~> 5.0)
+  shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
